@@ -162,7 +162,7 @@ elif [ -f "/data/magisk/resetprop" ]; then RESETPROP=/data/magisk/$RESETPROP; fi
 log_print "*** [Universal Hide] Version: $(getprop persist.usnf.version)"
 
 [ "$(getprop persist.usnf.fingerprint)" == 0 ] || {
-    [ "$(getprop persist.usnf.fingerprint)" == 1 ] || [ ! "$(getprop persist.usnf.fingerprint)" ] && FINGERPRINT=Xiaomi/sagit/sagit:7.1.1/NMF26X/V8.2.17.0.NCACNEC:user/release-keys || FINGERPRINT=$(getprop persist.usnf.fingerprint)
+    [ "$(getprop persist.usnf.fingerprint)" == 1 ] || [ ! "$(getprop persist.usnf.fingerprint)" ] && FINGERPRINT=Letv/LeMax2_WW/le_x2:6.0.1/FGXOSOP5801910121S/letv10120105:user/release-keys || FINGERPRINT=$(getprop persist.usnf.fingerprint)
     log_print "*** [Universal Hide] Changing build fingerprint value"
     $RESETPROP "ro.build.fingerprint" "$FINGERPRINT"
     $RESETPROP "ro.bootimage.build.fingerprint" "$FINGERPRINT"; }
